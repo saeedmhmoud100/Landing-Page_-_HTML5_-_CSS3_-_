@@ -1,4 +1,12 @@
 
+:root{
+    --main-bg-color:#1F2021;
+    --secondary-bg-color:#4A4B4C;
+    --text-color:#00C7FC;
+    --secondary-text-color:#1F2021;
+    --third-text-color:#A8A8A8;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -6,3 +14,45 @@
 body{
     font-family: 'Work Sans', sans-serif;
 }
+
+
+
+/* start Framework */
+
+.container{
+    background-color: var(--main-bg-color);
+    width: 90%;
+    margin: 96.5px auto 0 auto;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--secondary-bg-color);
+    width: 90%;
+    margin: 96.5px auto 0 auto;
+}
+
+@media (max-width: 767px ) {  }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width:768px) { 
+    .containe,.container-grid{
+        width: 750px;
+    }
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width:992px) { 
+    .container,.container-grid{
+        width: 970px;
+    }
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width:1200px) { 
+    .container,.container-grid{
+        width: 1170px;
+    }
+ }
+/* End Framework */
