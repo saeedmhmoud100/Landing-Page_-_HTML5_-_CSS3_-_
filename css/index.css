@@ -87,6 +87,16 @@ header .container .logo img{
     
 }
 
+header .container .nav_top label > i:first-of-type{
+    display: none;
+    color: white;
+}
+
+header .container .lg{
+    display: flex;
+    align-items: center;
+}
+
 header .container ul{
     list-style: none;
     display: flex;
@@ -124,20 +134,20 @@ header .container ul li:hover a{
     color: var(--text-color);
 }
 
-header .container i{
+header .container .search i.fa-magnifying-glass{
     color: white;
     cursor: pointer;
     position: relative;
     
 }
 
-header .container i::after{
+header .container .search i.fa-magnifying-glass::after{
     content: '';
     width: 2px;
-    height: 200%;
+    height: 209%;
     background-color: #E6E6E6;
     position: absolute;
-    top: -6px;
+    top: -8px;
     left: -30px;
     transition: height var(--transition-time);
 }
@@ -147,8 +157,8 @@ header .container input{
     height: 34px;
     width: 166px;
     outline: none;
-    margin-right: 3px;
-    margin-top: 4px;
+    margin-right: 28px;
+    margin-top: -1px;
     border: 1px #E6E6E6 solid;
     padding-left: 13px;
     transition: width var(--transition-time);
@@ -166,10 +176,98 @@ header .container input:focus{
     border-radius: 30px 0 0 30px;
     height: 34px;
     width: 166px;
-    margin-right: 3px;
-    margin-top: 4px;
+    margin-right: 28px;
+    margin-top: -1px;
     border: 1px #E6E6E6 solid;
     padding-left: 13px;
+}
+
+@media (max-width:998px){
+    header .container {
+        flex-direction: column;
+    }
+    
+header .container .nav_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .container .nav_top label > i:first-of-type{
+    display: inline-block;
+    color: white;
+    font-size:20px;
+}
+
+header .container .lg{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-items: center;
+    overflow: hidden;
+    height: 398px;
+    transition:height var(--transition-time);
+
+}
+
+header .container #search_icon_nav:checked +.lg{
+    height: 0px;
+}
+
+header .container .lg ul{
+    flex-direction: column;
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+header .container .lg ul li{
+    padding: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+header .container ul li::after{
+    width: 0;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    transition: width calc(var(--transition-time)+.2s);
+}
+
+header .container ul li:hover::after{
+    width: 100%;
+}
+
+header .container .search{
+    display: flex;
+    width: 90%;
+    padding: 0 10px;
+}
+
+
+header .container .search input{
+    display: flex;
+    width: 81vw;
+}
+
+header .container .search i.fa-magnifying-glass{
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+header .container .search i.fa-magnifying-glass::after{
+    width: 82vw;
+    height: 2px;
+    top: 46px;
+    left: -77vw;
+}
+}
+
+/* TODO  search nav*/
+@media (min-width:1105px) and (max-width:1149px) {
+    
 }
 
 /* End Header  */
