@@ -72,6 +72,7 @@ header{
     background-image: url('../images/header_1.jpg');
     height: 720px;
     position: relative;
+    z-index: 1;
 }
 
 header .overlay{
@@ -81,7 +82,8 @@ header .overlay{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(0,0,0,50%)
+    background-color: rgb(0,0,0,50%);
+    z-index: -2;
 }
 
 header .container{
@@ -98,6 +100,10 @@ header .container .logo img{
 	height:60px;
 	padding:7px 100px 10px 0px;
     
+}
+
+header .container .nav_top{
+    z-index: 3;
 }
 
 header .container .nav_top label > i:first-of-type{
@@ -145,6 +151,10 @@ header .container ul li a{
 
 header .container ul li:hover a{
     color: var(--text-color);
+}
+
+header .container .search{
+    z-index: 2;
 }
 
 header .container .search i.fa-magnifying-glass{
@@ -227,6 +237,11 @@ header .container #search_icon_nav:checked +.lg{
     height: 0px;
 }
 
+header .container #search_icon_nav:not(:checked) +.lg{
+    background-color: var(--main-bg-color);
+
+}
+
 header .container .lg ul{
     flex-direction: column;
     margin-top: 25px;
@@ -284,6 +299,52 @@ header .container .search i.fa-magnifying-glass::after{
 /* TODO  search nav*/
 @media (min-width:1105px) and (max-width:1149px) {
     
+}
+
+
+
+/* start landing */
+
+
+header .landing{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #00c5fc80;
+    height: 300px;
+    width: 50%;
+    z-index: -2;
+}
+
+header .landing .text{
+    margin-left: auto;
+    color: white;
+    width: 60%;
+    margin-right: 20px;
+    padding-left: 20px;
+}
+
+header .landing .text p{
+    color: white;
+}
+
+@media (max-width:900px) {
+header .landing .text{
+    width: 100%;
+}
+}
+
+@media (max-width:563px) {
+header .landing .text h2{
+    font-size: 20px;
+}
+
+header .landing .text p{
+    font-size: 10px;
+}
+
 }
 
 /* End Header  */
