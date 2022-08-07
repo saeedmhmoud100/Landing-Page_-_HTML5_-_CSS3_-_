@@ -32,8 +32,17 @@
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Search" id="nav_search" class="hidden">
+
+            <i class="fa-solid fa-magnifying-glass"  onmouseenter="search_hover()" onclick="search_hover()"></i>
         </div>
     </header>
+
+
+    <script>
+        const search_hover = () =>{
+            document.getElementById('nav_search').classList.toggle('hidden')
+        }
+    </script>
 </body>
 </html>
