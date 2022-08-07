@@ -21,6 +21,7 @@
 <body>
     <header>
         <div class="container nav_lg">
+            <div class="overlay"></div>
             <div class="nav_top">
                 <a href="#" class="logo">    
                     <img src="images/logo.png" alt="Logo">
@@ -57,13 +58,12 @@
 
 
     <script>
-        if(screen.width >= '998px'){
-            const search_hover = () =>{
-                document.getElementById('nav_search').classList.toggle('hidden')
-            }
-        }else{
-                document.getElementById('nav_search').classList.remove('hidden')
+
+window.onload = () => screen.width <= '998' ? document.getElementById('nav_search').classList.remove('hidden') : NaN
+window.onresize = () => search_hover()
+        const search_hover = () =>{
+            document.getElementById('nav_search').classList.toggle('hidden') ? screen.width >= '998' : document.getElementById('nav_search').classList.remove('hidden')
         }
-    </script>
+        </script>
 </body>
 </html>
