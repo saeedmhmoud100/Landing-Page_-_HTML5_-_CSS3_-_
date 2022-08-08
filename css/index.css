@@ -754,9 +754,75 @@ section.portfolio .container > ul.shuffle li{
 }
 }
 
-
-
-
-
-
 /* End Portfolio  */
+
+
+/* Start Video  */
+
+.video{
+    height: 620px;
+    margin-top: 80px;   
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.video video{
+    width: 100%;
+}
+
+.video .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 70px 0;
+    background-color: #00c7fc8f;
+}
+
+.video .text h3{
+    margin-bottom: 0;
+}
+
+.video .text p{
+    color: white;
+}
+
+.video .text button{
+    margin-top: 20px;
+    padding: 10px 37px;
+    font-size: 15px;
+    background-color: var(--main-bg-color);
+    color: white;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    border-radius: 1px soled var(--text-color);
+    transition: background-color var(--transition-time);
+}
+
+.video .text button:hover{
+    background-color:var(--text-color)
+}
+
+
+@media (max-width:682px) {
+.video{
+    margin-top: -14%;
+}
+}
+
+
+@media (max-width:488px) {
+    .video{
+        margin-top: -34%;
+    }
+    .video .text{
+        padding: 10px;
+    }
+    }
+
+/* End Video  */
