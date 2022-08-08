@@ -575,3 +575,109 @@ section.services.sec_2 .container .two > h3{
 
 
 /* End services.sec_2  */
+
+/* Start Portfolio  */
+
+section.portfolio .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.portfolio .container > p{
+    width: 63%;
+    text-align: center;
+    margin: auto;
+
+}
+
+section.portfolio .container > ul.shuffle{
+    list-style: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+section.portfolio .container > ul.shuffle li{
+    cursor: pointer;
+    padding: 12px 22px;
+    transition: color,background-color,border var(--transition-time);
+}
+section.portfolio .container > ul.shuffle li:hover,section.portfolio .container > ul.shuffle li.active{
+    color: white;
+    background-color: var(--text-color);
+    border: 1px solid var(--main-bg-color);
+}
+
+
+section.portfolio .gellary{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+section.portfolio .gellary .card{
+    height: 255px;
+    background-color: red;
+}
+
+section.portfolio .gellary .card img{
+    width: 100%;
+    height: 100%;
+}
+
+section.portfolio > input[type='button']{
+    padding: 10px 30px;
+    margin-top: 38px;
+    margin-left: calc( 50% - 30px );
+    cursor: pointer;
+    background-color: var(--main-bg-color);
+    color: white;
+    border: 1px solid var(--text-color);
+    transition: background-color var(--transition-time);
+}
+
+section.portfolio > input[type='button']:hover{
+    background-color: var(--text-color);
+    /* color: var(--main-bg-color); */
+    border-color:  var(--main-bg-color);
+
+}
+
+
+@media (max-width:1150px){
+    section.portfolio .gellary{
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        
+    }
+}
+
+
+
+@media (min-width:1660px){
+    section.portfolio .gellary{
+        grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+        
+    }
+}
+
+
+@media (max-width:554px) {
+section.portfolio .container > ul.shuffle{
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+section.portfolio .container > ul.shuffle li{
+    margin-bottom: 10px;
+}
+}
+
+
+
+
+
+
+/* End Portfolio  */
