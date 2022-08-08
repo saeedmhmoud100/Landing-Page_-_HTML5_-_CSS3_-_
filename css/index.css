@@ -54,6 +54,39 @@ p {
     margin-top: 0;
 }
 
+
+h2.specially-text{
+    position: relative;
+    width: 178.33px;
+}
+
+h2.specially-text::after{
+    position: absolute;
+    content: "";
+    bottom: -27px;
+    left: 7.5%;
+    width: 85%;
+    height: 2px;
+    background-color: var(--main-bg-color);
+    z-index: -1;
+
+}
+
+h2.specially-text::before{
+    position: absolute;
+    content: "";
+    bottom: -32px;
+    left: calc(50% - 5px);
+    width:10px;
+    height: 10px;
+    background-color: white;
+    border: 1px solid  var(--main-bg-color);
+    border-radius: 50%;
+}
+
+
+
+
 @media (max-width: 767px ) {  }
 
 /* Small devices (tablets, 768px and up) */
@@ -621,11 +654,57 @@ section.portfolio .gellary{
 section.portfolio .gellary .card{
     height: 255px;
     background-color: red;
+    position: relative;
 }
 
 section.portfolio .gellary .card img{
     width: 100%;
     height: 100%;
+}
+
+section.portfolio .gellary .card .overlay i{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    color: white;
+    top: -131.5px;
+    cursor: pointer;
+}
+
+section.portfolio .gellary .card .overlay{
+    position: absolute;
+    width: 99%;
+    height: 29%;
+    left: 1%;
+    bottom: 0;
+    /* background-color: rgba(255, 255, 255, 0.452); */
+    visibility: hidden;
+    /* transition: visibility var(--transition-time); */
+}
+
+section.portfolio .gellary .card .overlay:hover{
+    visibility: visible;
+}
+
+section.portfolio .gellary .card .overlay h3{
+    margin-bottom: 0;
+    color:white;
+}
+
+
+section.portfolio .gellary .card .overlay p{
+    padding: 0;
+    margin: 0;
+    font-family: 10px;
+    color:white;
+}
+
+section.portfolio .gellary .card img:hover + .overlay{
+    visibility: visible;
 }
 
 section.portfolio > input[type='button']{
