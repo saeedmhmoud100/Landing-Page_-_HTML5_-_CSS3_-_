@@ -17,7 +17,7 @@
 
 body{
     font-family: 'Work Sans', sans-serif;
-    height: 5000px;
+    height: 8000px;
 }
 
 p {
@@ -883,10 +883,6 @@ section.portfolio .container > ul.shuffle li{
 }
 
 
-@media (max-width:828px) {
-    
-}
-
 /* 
 .about-us .top .phones{
     height: 350px;
@@ -984,12 +980,62 @@ section.portfolio .container > ul.shuffle li{
 
 */
 
+/* End About-Us */
+
+
+/* Start Statistics */
+
 
 .statistics{
-    height: 600px;
+    padding: 100px 0px;
     background-color: var(--main-bg-color);
     width: 100%;
     z-index: 2;
+    color: white;
 }
 
-/* End About-Us */
+.statistics .container-grid{
+    margin-top: 0;
+    padding: 18px 120px;
+    grid-template-columns: repeat(4,1fr);
+    background-color: #00c5fc8e;
+    width: 100%;
+}
+
+.statistics .container-grid .card{
+    text-align: center;
+}
+
+.statistics .container-grid .card p{
+    color: white;
+    font-size: 10px;
+}
+
+.statistics .container-grid .card h3{
+    color: white;
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+
+
+@media (max-width:860px) {
+.statistics .container-grid{
+    grid-template-columns: repeat(2,1fr);
+    padding: 18px 50px;
+}
+}
+
+
+@media (max-width:558px) {
+    .statistics .container-grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    }
+
+/* End Statistics */
+
+
+
+
