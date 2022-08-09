@@ -992,6 +992,18 @@ section.portfolio .container > ul.shuffle li{
     width: 100%;
     z-index: 2;
     color: white;
+    background-image: url('../images/header_3.jpg');
+    position: relative;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #00000063;
 }
 
 .statistics .container-grid{
@@ -999,7 +1011,7 @@ section.portfolio .container > ul.shuffle li{
     padding: 18px 120px;
     grid-template-columns: repeat(4,1fr);
     background-color: #00c5fc8e;
-    width: 100%;
+    z-index: 2;
 }
 
 .statistics .container-grid .card{
@@ -1037,5 +1049,175 @@ section.portfolio .container > ul.shuffle li{
 /* End Statistics */
 
 
+/* Start Skills */
+
+.skills .container{
+    display: flex;
+}
+
+.skills .container > div{
+    padding: 0 20px;
+    text-align: center;
+}
+
+.skills .container > div > .text{
+    padding: 0 20px;
+}
+
+.skills .container h4{
+    font-weight: 600;
+}
+
+.skills .container p{
+    font-size: 10px;
+}
+
+.skills .container .testimonials .cards{
+    height: 252px;
+}
+
+.skills .container .testimonials .cards .card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 10px;
+    width: 73%;
+
+}
+
+.skills .container .testimonials .cards .card img{
+    width: 24%;
+    height: 96px;
+    border-radius: 50%;
+}
+
+.skills .container .testimonials .cards .card .text{
+    position: relative;
+    border-bottom: 2px solid var(--third-text-color);
+    padding-bottom: 16px;
+    width: 69%;
+}
+
+.skills .container .testimonials .cards .card .text p{
+    color: black;
+    font-weight: 600;
+    /* padding: 0 47px; */
+    text-align: left;
+}
+
+.skills .container .testimonials .cards .card .text span{
+    position: absolute;
+    font-size: 8px;
+    right: 0;
+    bottom: 7px;
+}
+
+.skills .container .our-skills .progresses{
+    margin-top: 39px;
+    height: 252px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.skills .container .our-skills .progresses .progres{
+    text-align: left;
+}
+
+.skills .container .our-skills .progresses .progres span{
+    letter-spacing: -.8px;
+    font-size: 12px;
+    margin-left: 4px;
+    font-weight: 500;
+}
+
+.skills .container .our-skills .progresses .progres .bar{
+    height: 31px;
+    width: 100%;
+    background-color: #DBDBDB;
+    margin-top: 4px;
+}
+
+.skills .container .our-skills .progresses .progres .bar .bg{
+    background-color: var(--text-color);
+    height: 100%;
+    position: relative;
+}
+
+.skills .container .our-skills .progresses .progres .bar .bg::after{
+    content: '';
+    border: 5px solid;
+    border-color:  var(--main-bg-color) transparent transparent transparent;
+    position: absolute;
+    right: 0;
+    top: -2%;
+    transform: translate(50%,-100%);
+}
 
 
+.skills .container .our-skills .progresses .progres .bar .bg::before{
+    content: attr(percentage);
+    background-color: var(--main-bg-color);
+    color: white;
+    font-size: 14px;
+    padding: 3px;
+    position: absolute;
+    right: 0;
+    top: -100%;
+    transform: translateX(50%);
+}
+
+
+
+@media (max-width:1020px) {
+.skills .container{
+    flex-direction: column;
+    padding: 0 12%;
+    
+}
+.skills .container .testimonials .cards {
+    display: flex;
+}
+}
+
+@media (max-width:998px) {
+    .skills .container{
+        flex-direction: column;
+        padding: 0 0%;
+    }
+
+}
+
+
+@media (max-width:784px) {
+    .skills .container .testimonials .cards {
+        display: initial;
+    }
+    .skills .container .testimonials .cards .card{
+        margin: 35px auto;
+    }
+}
+
+
+@media (max-width:520px) {
+
+.skills .container .testimonials .cards {
+    height: 302px;
+}
+.skills .container .testimonials .cards .card{
+    margin: 0;
+    width: 100%;
+}
+.skills .container .testimonials .cards .card img {
+    height: 74px;
+}
+}
+
+
+
+@media (max-width:334px) {
+.skills .container .testimonials .cards {
+    height: 327px;
+}
+}
+/* End Skills  */
