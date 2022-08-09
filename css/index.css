@@ -845,6 +845,151 @@ section.portfolio .container > ul.shuffle li{
 
 }
 
-
-
 /* End Video  */
+
+/* Start About-us  */
+
+.about-us .container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+}
+
+.about-us .container .specially-text{
+    width: 200px;
+    margin: auto;
+}
+
+.about-us .container .text{
+    max-width: 560px;
+}
+
+.about-us .container .text > p{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-us .screens{
+    max-width: 695px;
+    max-height: 259px;
+    overflow-y: hidden;
+}
+
+.about-us .screens img{
+    vertical-align: bottom;
+    max-width: 100%;
+}
+
+
+@media (max-width:828px) {
+    
+}
+
+/* 
+.about-us .top .phones{
+    height: 350px;
+    position: relative;
+    z-index: -1;
+}
+
+.top .phones .phone{
+    position: absolute;
+}
+
+.top .phones .phone:first-of-type{
+    bottom: -101px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top .phones .phone:first-of-type::before{
+    content: "";
+    width: 434px;
+    height: 400px;
+    background-color: var(--text-color);
+    display: block;
+    position: absolute;
+    top: 19px;
+    right: 14px;
+}
+
+.top .phones .phone:nth-of-type(2){
+    bottom: -44px;
+    left: -127px;
+}
+
+.top .phones .phone:nth-of-type(2)::before{
+    content: "";
+    width: 346px;
+    height: 209px;
+    background-color: #DB067B;
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 53px;
+}
+
+.top .phones .phone:last-of-type{
+    bottom: -28px;
+    right: -50px;
+}
+
+.top .phones .phone:last-of-type::before{
+    content: "";
+    width: 148px;
+    height: 200px;
+    background-color: #DB067B;
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 11px;
+} 
+
+@media (max-width:752px) {
+
+.top .phones .phone:first-of-type::before{
+    width: 434px;
+    height: 400px;
+    top: 19px;
+    right: 14px;
+}
+
+.top .phones .phone:nth-of-type(2){
+    bottom: -44px;
+    left: -127px;
+}
+
+.top .phones .phone:nth-of-type(2)::before{
+    width: 346px;
+    height: 209px;
+    top: 13px;
+    left: 53px;
+}
+
+.top .phones .phone:last-of-type{
+    bottom: -28px;
+    right: -50px;
+}
+
+.top .phones .phone:last-of-type::before{
+    width: 148px;
+    height: 200px;
+    top: 24px;
+    right: 11px;
+}
+
+}
+
+*/
+
+
+.statistics{
+    height: 600px;
+    background-color: var(--main-bg-color);
+    width: 100%;
+    z-index: 2;
+}
+
+/* End About-Us */
