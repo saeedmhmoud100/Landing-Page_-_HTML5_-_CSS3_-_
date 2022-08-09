@@ -676,6 +676,17 @@ section.portfolio .gellary .card .overlay i{
     cursor: pointer;
 }
 
+
+section.portfolio .gellary .card .overlay i::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 96px;
+    transform: translate(-50%, -50%);
+    font-weight: 100;
+
+}
+
 section.portfolio .gellary .card .overlay{
     position: absolute;
     width: 99%;
@@ -824,6 +835,16 @@ section.portfolio .container > ul.shuffle li{
     .video .text{
         padding: 10px;
     }
+}
+
+
+@media (min-width:1272px) {
+    .video{
+        margin-top: 19%;
     }
+
+}
+
+
 
 /* End Video  */
