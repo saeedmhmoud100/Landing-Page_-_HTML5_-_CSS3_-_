@@ -1209,3 +1209,184 @@ section.portfolio > input[type="button"]:hover {
 }
 
 /* End quote  */
+
+/* Start Pricing  */
+
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pricing .text {
+  text-align: center;
+  margin: 70px auto 0;
+}
+
+.pricing .text h2 {
+  margin: auto;
+}
+
+.pricing .text p {
+  margin-top: 50px;
+}
+
+/* .pricing .container-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+} */
+
+.pricing .container-grid {
+  justify-items: center;
+}
+
+.pricing .container-grid .content {
+  grid-column: span 3;
+  position: relative;
+  padding-bottom: 100px;
+  transition: box-shadow var(--transition-time);
+}
+
+.pricing .container-grid .content:hover {
+  box-shadow: 0px 7px 6px 0px grey;
+  border-top: 1px solid var(--text-color);
+}
+
+.pricing .container-grid .card {
+  text-align: center;
+  margin: auto;
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  padding-top: 40px;
+  width: 227.5px;
+  margin-top: -1px;
+}
+
+.pricing .container-grid .card span:first-of-type {
+  margin-bottom: 0;
+}
+
+.pricing .container-grid .card h3 {
+  font-size: 46px;
+  font-weight: 400;
+  margin-top: 7px;
+  border-bottom: 2px solid var(--text-color);
+  padding-bottom: 17px;
+  margin-bottom: 34px;
+  position: relative;
+}
+
+.pricing .container-grid .card h3::before {
+  content: "$";
+  font-size: 20px;
+  top: -4px;
+  position: absolute;
+  left: 68px;
+}
+
+.pricing .container-grid .card h3::after {
+  content: "/MO";
+  position: absolute;
+  font-size: 13px;
+  right: 55px;
+  bottom: 23px;
+}
+
+.pricing .container-grid .card span:not(:first-of-type) {
+  display: block;
+  margin: 35px auto;
+  padding-bottom: 22px;
+}
+
+.pricing .container-grid .card span:last-of-type {
+  margin-bottom: 0;
+}
+
+.pricing .container-grid .card span:not(:first-of-type, :last-of-type) {
+  border-bottom: 1px solid var(--text-color);
+  width: 111px;
+}
+
+.pricing .container-grid .card span:nth-of-type(2) {
+  border-bottom-width: 2px;
+}
+
+.pricing .container-grid .content button {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--text-color);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color var(--transition-time),
+    bottom var(--transition-time);
+}
+
+.pricing .container-grid .content button:hover {
+  background-color: rgb(247, 247, 247);
+}
+
+.pricing .container-grid .content button:active {
+  background-color: var(--text-color);
+  bottom: 3.8%;
+}
+
+.pricing .contact {
+  margin: auto;
+  text-align: center;
+  margin-top: 41px;
+}
+
+.pricing .contact p {
+  color: #000;
+}
+
+.pricing .contact button {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--text-color);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color var(--transition-time);
+}
+
+.pricing .contact button:hover {
+  background-color: var(--text-color);
+}
+
+.pricing .contact button:active {
+  background-color: white;
+  margin-top: 3px;
+}
+
+@media (max-width: 996px) {
+  .pricing .text {
+    margin-bottom: 0px;
+  }
+  .pricing .container-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .pricing .container-grid .content {
+    margin-bottom: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .pricing .container-grid .card {
+    margin: auto;
+    margin-top: -1px;
+  }
+  .pricing .contact {
+    margin-top: -30px;
+  }
+}
+
+@media (max-width: 552px) {
+  .pricing .container-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* end Pricing  */
