@@ -1457,9 +1457,14 @@ section.portfolio > input[type="button"]:hover {
 
 .subscribe .container form button {
   width: 30%;
-  background-color: var(--text-color);
+  background-color: #00c7fcba;
   color: white;
   cursor: pointer;
+  transition: background-color var(--transition-time);
+}
+
+.subscribe .container form button:hover {
+  background-color: var(--text-color);
 }
 
 .subscribe .container p {
@@ -1482,3 +1487,100 @@ section.portfolio > input[type="button"]:hover {
 }
 
 /* End Subscribe */
+
+/* Start Contact  */
+
+.contact {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.contact .text {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.contact .container {
+  display: flex;
+  justify-items: flex-start;
+  height: 457px;
+}
+
+.contact .container form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-content: space-between;
+  padding: 22px;
+}
+
+.contact .container form > input {
+  height: 55px;
+  padding-left: 20px;
+  border: 1px solid var(--secondary-bg-color);
+}
+
+.contact .container form textarea {
+  padding-left: 20px;
+  padding-top: 20px;
+  border: 1px solid var(--secondary-bg-color);
+}
+
+.contact .container form button {
+  padding: 14px 0;
+  width: 163px;
+  font-size: 14px;
+  align-self: self-end;
+  background-color: var(--text-color);
+  /* border-color: var(--text-color); */
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color var(--transition-time);
+}
+
+.contact .container form button:hover {
+  background-color: #00c5fcd3;
+}
+
+.contact .container form button:active {
+  background-color: var(--text-color);
+}
+
+.contact .info .one {
+  height: 28%;
+}
+
+.contact .info p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.contact .info h2 {
+  margin-bottom: 30px;
+  width: auto;
+}
+
+@media (max-width: 600px) {
+  .contact .container {
+    flex-direction: column-reverse;
+    height: 657px;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  .contact .container form {
+    width: auto;
+    height: 73%;
+  }
+
+  .contact .info {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/* End Contact */
