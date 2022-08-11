@@ -625,14 +625,17 @@ section.portfolio .container > p {
 section.portfolio .container > ul.shuffle {
   list-style: none;
   display: flex;
-  width: 50%;
+  width: 86%;
   justify-content: space-around;
   margin-top: 80px;
+  padding: 0 10px;
 }
 
 section.portfolio .container > ul.shuffle li {
   cursor: pointer;
   padding: 12px 22px;
+  width: 100%;
+  margin: 0 13px;
   transition: color, background-color, border var(--transition-time);
 }
 section.portfolio .container > ul.shuffle li:hover,
@@ -649,7 +652,7 @@ section.portfolio .gellary {
 
 section.portfolio .gellary .card {
   height: 255px;
-  background-color: red;
+  background-color: var(--main-bg-color);
   position: relative;
 }
 
@@ -682,13 +685,15 @@ section.portfolio .gellary .card .overlay i::before {
 
 section.portfolio .gellary .card .overlay {
   position: absolute;
-  width: 99%;
+  width: 100%;
   height: 29%;
-  left: 1%;
-  bottom: 0;
+  /* left: 1%; */
+  top: 71%;
   /* background-color: rgba(255, 255, 255, 0.452); */
   visibility: hidden;
   /* transition: visibility var(--transition-time); */
+  z-index: 1;
+  grid-template-columns: repeat();
 }
 
 section.portfolio .gellary .card .overlay:hover {
@@ -737,6 +742,14 @@ section.portfolio > input[type="button"]:hover {
 @media (min-width: 1660px) {
   section.portfolio .gellary {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 1200px) {
+  section.portfolio .container > ul.shuffle {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px 20px;
   }
 }
 
