@@ -471,6 +471,21 @@ section.services.sec_1 .container-grid .cards .card > div h3 {
   }
 }
 
+@media (max-width: 300px) {
+  section.services.sec_1 .container-grid .cards {
+    grid-area: 3/2/4/12;
+    grid-template-columns: repeat(1, 80%);
+    text-align: center;
+  }
+
+  section.services.sec_1 .container-grid .cards .card {
+    grid-template-columns: 20% 70%;
+  }
+  section.services.sec_1 .container-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* End services.sec_1  */
 
 /* Start services.sec_2  */
@@ -699,7 +714,7 @@ section.portfolio .gellary .card img:hover + .overlay {
 section.portfolio > input[type="button"] {
   padding: 10px 30px;
   margin-top: 38px;
-  margin-left: calc(50% - 30px);
+  margin-left: calc(50% - 58px);
   cursor: pointer;
   background-color: var(--main-bg-color);
   color: white;
