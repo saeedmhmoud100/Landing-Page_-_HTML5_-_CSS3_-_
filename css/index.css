@@ -774,6 +774,7 @@ section.portfolio > input[type="button"]:hover {
   position: relative;
   display: flex;
   align-items: center;
+   overflow: hidden;
 }
 
 .video video {
